@@ -118,10 +118,13 @@ h1, h2, h3 {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Set a fixed height for the slider */
 }
 
 .image-slider img {
     width: 100%;
+    height: 100%; /* Ensure images fill the height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
     display: none;
 }
 
@@ -335,4 +338,26 @@ footer {
     height: 100%;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+/* Add styles for the slider buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.prev {
+    left: 10px; /* Positioning for the previous button */
+}
+
+.next {
+    right: 10px; /* Positioning for the next button */
 }

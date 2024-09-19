@@ -17,6 +17,9 @@ $(document).ready(function() {
             var $slides = $slider.find('img');
             var currentSlide = 0;
 
+            // Create navigation buttons
+            $slider.append('<button class="prev">Prev</button><button class="next">Next</button>');
+
             function showSlide(index) {
                 $slides.fadeOut(500);
                 $slides.eq(index).fadeIn(500);
@@ -27,7 +30,16 @@ $(document).ready(function() {
                 showSlide(currentSlide);
             }
 
-            setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + $slides.length) % $slides.length;
+                showSlide(currentSlide);
+            }
+
+            $slider.find('.next').on('click', nextSlide);
+            $slider.find('.prev').on('click', prevSlide);
+
+            // Remove automatic slide change
+            // setInterval(nextSlide, 5000); // Change slide every 5 seconds
             showSlide(currentSlide);
         });
     }
