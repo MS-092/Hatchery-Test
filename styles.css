@@ -39,8 +39,8 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 4rem 2rem;
-    min-height: 100vh;
+    padding: 2rem 12rem !important;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,16 +177,17 @@ footer {
     overflow: hidden;
     max-width: 100%;
     margin-top: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .image-preview img {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin: auto
 }
 
 .image-preview:hover {
@@ -242,8 +243,8 @@ footer {
 }
 
 #home h1 {
+    margin: 0;
     font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 #home p {
@@ -266,6 +267,20 @@ footer {
 #home .cta-button:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
+}
+
+#origin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+    #origin {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 2rem;
+    }
 }
 
 .slider-container {
