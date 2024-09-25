@@ -25,7 +25,7 @@
             <div class="content-wrapper">
                 <h1>Welcome to Montavo</h1>
                 <p>Enhance your workspace with our ergonomic tables, designed for comfort and productivity.</p>
-                <div class="cta-button">Explore our tables</div>
+                <div class="cta-button" onclick="location.href='#table1'">Explore our tables</div>
             </div>
         </section>
 
@@ -47,30 +47,27 @@
         </section>
 
         <section id="empathy-map" class="section">
-            <h2>Empathy Map</h2>
+            <h2>Business sweet spot</h2>
             <div class="image-container">
-                <img src="images/empathy.webp" alt="Empathy Map Illustration">
+                <img src="images/sweet_spot.png" alt="Sweet Spot Illustration">
             </div>
             <div class="empathy-map">
-                <div class="empathy-section" id="says">
-                    <h3>Says</h3>
-                    <div class="note-card">Example note 1</div>
-                    <div class="note-card">Example note 2</div>
-                </div>
-                <div class="empathy-section" id="thinks">
-                    <h3>Thinks</h3>
-                    <div class="note-card">Example note 1</div>
-                    <div class="note-card">Example note 2</div>
-                </div>
-                <div class="empathy-section" id="does">
-                    <h3>Does</h3>
-                    <div class="note-card">Example note 1</div>
-                    <div class="note-card">Example note 2</div>
-                </div>
-                <div class="empathy-section" id="feels">
-                    <h3>Feels</h3>
-                    <div class="note-card">Example note 1</div>
-                    <div class="note-card">Example note 2</div>
+                <div class="empathy-section-container"> <!-- Added container for flex alignment -->
+                    <div class="empathy-section left" id="says">
+                        <h3>Technology</h3>
+                        <div class="note-card">Example note 1</div>
+                        <div class="note-card">Example note 2</div>
+                    </div>
+                    <div class="empathy-section center" id="thinks">
+                        <h3>People</h3>
+                        <div class="note-card">Example note 1</div>
+                        <div class="note-card">Example note 2</div>
+                    </div>
+                    <div class="empathy-section right" id="does">
+                        <h3>Business</h3>
+                        <div class="note-card">Example note 1</div>
+                        <div class="note-card">Example note 2</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -79,8 +76,14 @@
             <h2>Table 1: ET 262</h2>
             <div class="table-content">
                 <div class="image-slider">
-                    <img src="images/table1/table1.png" alt="ET 262 Image 1" class="slider-image active">
-                    <img src="images/table1/table1.2.png" alt="ET 262 Image 3" class="slider-image">
+                    <div class="image-container">
+                        <img src="images/table1/table1.png" alt="ET 262 Image 1" class="slider-image active">
+                        <div class="overlay">View Details</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/table1/table1.2.png" alt="ET 262 Image 3" class="slider-image">
+                        <div class="overlay">View Details</div>
+                    </div>
                     <button class="prev">Prev</button>
                     <button class="next">Next</button>
                 </div>
@@ -94,7 +97,18 @@
                     </ul>
                     <h3>Specifications</h3>
                     <ul>
-                        <li>Change later</li>
+                        <li>Max load capacity: 100kg</li>
+                        <li>Speed: 25ms</li>
+                        <li>Power: 100V-240V</li>
+                        <li>Decibel: &lt;50db</li>
+                        <li>Stroke: 490mm</li>
+                        <li>Height range: 700-1190mm</li>
+                        <li>Desk frame strench range: 1116-1486mm</li>
+                        <li>Tabletop dimensions:</li>
+                        <ul>
+                            <li>Length: 1200-2000mm</li>
+                            <li>Depth: 600-800mm</li>
+                        </ul>
                     </ul>
                 </div>
             </div>
@@ -112,10 +126,27 @@
                         <li>Dual-motor enables fast and stable adjustment</li>
                         <li>Enhanced anti-collision function</li>
                         <li>Ultra-quiet operation, lower than 50db</li>
+                        <li>Standing desk remains fairly stable at the highest level</li>
                     </ul>
                     <h3>Specifications</h3>
                     <ul>
-                        <li>Change later</li>
+                        <li>Max load capacity: 125kg</li>
+                        <li>Speed: 38ms</li>
+                        <li>Power: 100V-240V</li>
+                        <li>Decibel: &lt;50db</li>
+                        <li>Stroke: 650mm</li>
+                        <li>Height range: 600-1250mm</li>
+                        <li>Tabletop dimensions:</li>
+                        <ul>
+                            <li>Width: 1200-2000mm</li>
+                            <li>Depth: 600-800mm</li>
+                        </ul>
+                        <li>
+                            Frame color:
+                            <div class="color-square" style="background-color: #272322;"></div>
+                            <div class="color-square" style="background-color: #7d7370;"></div>
+                            <div class="color-square" style="background-color: #ffffff;"></div>
+                        </li>
                     </ul>
                 </div>
             </div>

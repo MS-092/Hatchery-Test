@@ -13,6 +13,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -68,11 +69,14 @@ h1, h2, h3 {
 }
 
 .empathy-map {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 800px;
     width: 100%;
+    display: flex; /* Arrange sections horizontally */
+      justify-content: space-around; /* Equal spacing between sections */
+      width: 80%; /* Adjust width as needed */
+      margin: 20px auto; /* Center the map */
 }
 
 .empathy-section {
@@ -232,8 +236,8 @@ footer {
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 #home h1 {
@@ -303,7 +307,7 @@ footer {
 
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 70%;
     object-fit: contain;
     max-height: 500px; /* Adjust this value as needed */
 }
@@ -360,4 +364,59 @@ footer {
 
 .next {
     right: 10px; /* Positioning for the next button */
+}
+
+.color-square {
+    display: inline-block;
+    /* Keep it inline with text */
+    width: 20px;
+    /* Width of the square */
+    height: 20px;
+    /* Height of the square */
+    border: 1px solid #000;
+    /* Optional: border color */
+}
+
+.slider-image {
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth scaling effect */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.slider-image:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.empathy-section-container {
+    display: flex; /* Aligns children in a row */
+    justify-content: space-around; /* Distributes space evenly */
+    width: 80%;
+    margin: 20px auto;
 }
