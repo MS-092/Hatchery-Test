@@ -122,7 +122,8 @@ h1, h2, h3 {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 300px; /* Set a fixed height for the slider */
+    height: 400px; /* Set a fixed height as needed */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .image-slider img {
@@ -307,9 +308,9 @@ footer {
 
 .image-container img {
     width: 100%;
-    height: 70%;
-    object-fit: contain;
-    max-height: 500px; /* Adjust this value as needed */
+    height: 100%;
+    object-fit: fit; /* Change to contain to fit the entire image */
+    max-height: 400px; /* Adjust this value as needed */
 }
 
 /* Media query for smaller screens */
@@ -419,4 +420,27 @@ footer {
     justify-content: space-around; /* Distributes space evenly */
     width: 80%;
     margin: 20px auto;
+}
+
+.responsive-image {
+    width: 40%;
+    height: auto;
+    max-height: 250px;
+}
+
+.fit-image {
+    width: 100%; /* Adjusts the width to fit the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.image-slider .slider-image {
+width: 100%;
+/* Adjust as needed */
+height: auto;
+/* Maintain aspect ratio */
+max-height: 300px;
+/* Set a fixed height */
+object-fit: cover;
+/* Ensure images cover the area */
 }
